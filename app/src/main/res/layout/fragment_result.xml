@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ResultFragment">
+
+
+    <ImageView
+        android:id="@+id/imgAnotherLove"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/calculator_love"
+        android:layout_width="460dp"
+        android:layout_height="300dp"/>
+
+    <TextView
+        android:id="@+id/second_you"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="@string/you"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgAnotherLove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableBottomCompat="@drawable/broken_heart_red" />
+
+    <TextView
+        android:id="@+id/second_me"
+        android:textSize="20sp"
+        android:text="@string/me"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/second_you"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/your_score"
+        android:textSize="20sp"
+        android:text="Your Score"
+        android:textColor="#FE637F"
+        app:layout_constraintTop_toBottomOf="@id/second_me"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/heart_img"
+        android:elevation="11dp"
+        android:src="@drawable/heart"
+        android:scaleType="center"
+        android:layout_marginTop="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/your_score"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <TextView
+        android:id="@+id/percentage"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:text="100%"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/your_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+ <com.google.android.material.button.MaterialButton
+     android:id="@+id/btn_try_again"
+     android:fontFamily="sans-serif-black"
+     android:textColor="@color/black"
+     android:text="Try Again"
+     android:backgroundTint="#6C63FE"
+     android:elevation="30dp"
+     app:cornerRadius="20dp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/heart_img"
+     android:layout_width="250dp"
+     android:layout_height="55dp"/>
+
+    <TextView
+        android:id="@+id/second_home"
+        android:text="@string/home"
+        android:textColor="@color/black"
+        android:layout_margin="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableTopCompat="@drawable/ic_baseline_heart_broken_24" />
+
+    <TextView
+        android:id="@+id/seocnd_history"
+        android:text="@string/history"
+        android:textColor="@color/black"
+        android:layout_margin="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableTopCompat="@drawable/ic_baseline_bar_chart_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
