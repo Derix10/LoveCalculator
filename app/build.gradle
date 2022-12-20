@@ -28,7 +28,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    kotlinOptions {
+        kotlinOptions {
         jvmTarget = '1.8'
     }
     buildFeatures{
@@ -54,4 +54,6 @@ dependencies {
     def nav_version = "2.5.3"
     implementation "androidx.navigation:navigation-fragment:$nav_version"
     implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    implementation "androidx.fragment:fragment-ktx:1.5.5"
 }
