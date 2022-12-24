@@ -1,9 +1,6 @@
 package com.example.retrofitapp.mvvm
 
-import android.content.SharedPreferences
 import androidx.lifecycle.MutableLiveData
-import com.example.retrofitapp.App
-import com.example.retrofitapp.hilt.Modules
 import com.example.retrofitapp.retrofit.CalculateApi
 import retrofit2.Call
 import retrofit2.Response

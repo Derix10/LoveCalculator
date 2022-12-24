@@ -1,6 +1,5 @@
 package com.example.retrofitapp.fragment
 
-import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,7 +10,6 @@ import androidx.navigation.fragment.findNavController
 import com.example.retrofitapp.mvvm.ActivityMainViewModel
 import com.example.retrofitapp.databinding.FragmentCalculatorBinding
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class CalculatorFragment : Fragment() {

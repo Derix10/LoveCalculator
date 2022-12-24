@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.retrofitapp.databinding.FragmentResultBinding
-import dagger.hilt.android.AndroidEntryPoint
 
 
 class ResultFragment : Fragment() {
