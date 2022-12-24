@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".board.GetStartedFragment">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:src="@drawable/img_1" />
+
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="@string/fun"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="180dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        app:cornerRadius="22sp"
+        android:text="@string/get_started"
+        android:textSize="20sp"
+        android:fontFamily="serif"
+        style="@style/Platform.MaterialComponents"
+        android:layout_marginHorizontal="20sp"
+        android:id="@+id/btn_getStarted"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+</FrameLayout>

@@ -1,5 +1,6 @@
-package com.example.retrofitapp
+package com.example.retrofitapp.retrofit
 
+import com.example.retrofitapp.mvvm.CalculateModel
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header

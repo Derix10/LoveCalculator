@@ -1,20 +1,19 @@
-package com.example.retrofitapp
+package com.example.retrofitapp.fragment
 
-import android.annotation.SuppressLint
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.viewModels
-import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import com.example.retrofitapp.mvvm.ActivityMainViewModel
 import com.example.retrofitapp.databinding.FragmentCalculatorBinding
-import retrofit2.Call
-import retrofit2.Response
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class CalculatorFragment : Fragment() {
     private val viewModel: ActivityMainViewModel by viewModels()
     private lateinit var binding: FragmentCalculatorBinding
@@ -33,6 +32,7 @@ class CalculatorFragment : Fragment() {
         binding.btnCalculate.setOnClickListener {
             makeRequest()
         }
+
     }
 
     private fun makeRequest() {
@@ -41,8 +41,7 @@ class CalculatorFragment : Fragment() {
             binding.you.text.toString()
         ).observe(viewLifecycleOwner) {
             findNavController().navigate(
-                CalculatorFragmentDirections
-                    .actionCalculatorFragmentToResultFragment(it)
+                CalculatorFragmentDirections.actionCalculatorFragmentToResultFragment(it)
             )
         }
     }

@@ -1,16 +1,19 @@
-package com.example.retrofitapp
+package com.example.retrofitapp.mvvm
 
+import android.content.SharedPreferences
 import androidx.lifecycle.MutableLiveData
-import androidx.navigation.NavController
+import com.example.retrofitapp.App
+import com.example.retrofitapp.hilt.Modules
+import com.example.retrofitapp.retrofit.CalculateApi
 import retrofit2.Call
 import retrofit2.Response
-import javax.security.auth.callback.Callback
+import javax.inject.Inject
 
-class Repository {
+class Repository @Inject constructor(private val api : CalculateApi) {
 
     fun makeRequest(secondName: String, firstName: String): MutableLiveData<CalculateModel> {
         val liveData = MutableLiveData<CalculateModel>()
-        App.api.getPercentage(secondName, firstName).enqueue(
+        api.getPercentage(secondName, firstName).enqueue(
             object : retrofit2.Callback<CalculateModel> {
                 override fun onResponse(
                     call: Call<CalculateModel>,
@@ -29,4 +32,4 @@ class Repository {
         )
         return liveData
     }
-}
+    }

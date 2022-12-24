@@ -10,4 +10,12 @@
     <string name="you">You</string>
     <string name="first_name">First Name</string>
     <string name="love_calculator">Love Calculator</string>
+    <string name="firstString">You should take the time to help those\n who need you</string>
+    <string name="secondString">It is now no longer possible for \n you to cherish love</string>
+    <string name="thirdString">We have made the correction for you \n dont worry \n Maybe someone is waiting for you!</string>
+    <string name="titleFirstString">Have a good time</string>
+    <string name="titleSecondString">Cherishing love</string>
+    <string name="titleThirdString">Have a breakup</string>
+    <string name="get_started">Get Started</string>
+    <string name="fun">It\'s Funs and Many more</string>
 </resources>

@@ -1,19 +1,7 @@
 package com.example.retrofitapp
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-class App: Application() {
-
-    companion object{
-        lateinit var api : CalculateApi
-
-    }
-
-    override fun onCreate() {
-        super.onCreate()
-
-        val retrofit = RetrofitService()
-        api = retrofit.getApi()
-
-    }
-}
+@HiltAndroidApp
+class App: Application()

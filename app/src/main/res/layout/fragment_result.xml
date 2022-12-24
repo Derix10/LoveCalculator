@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ResultFragment">
+    tools:context=".fragment.ResultFragment">
 
 
     <ImageView
@@ -12,7 +12,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/calculator_love"
+        android:src="@drawable/second_img"
+
         android:layout_width="460dp"
         android:layout_height="300dp"/>
 
@@ -21,6 +22,7 @@
         android:textSize="20sp"
         android:textColor="@color/black"
         android:text="@string/you"
+        android:layout_marginTop="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgAnotherLove"
