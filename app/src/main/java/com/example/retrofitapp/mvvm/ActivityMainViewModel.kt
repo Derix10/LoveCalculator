@@ -8,14 +8,15 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ActivityMainViewModel @Inject constructor(private val repository : Repository,
-                                                private val prefs: SharedPreferences ) : ViewModel() {
+                                  private val prefs: SharedPreferences) : ViewModel() {
+
 
 
     fun makeRequest(secondName: String, firstName: String): LiveData<CalculateModel> {
         return repository.makeRequest(secondName, firstName)
     }
 
-    fun saveBoardState(){
+    fun saveBoardState() {
         prefs.edit().putBoolean("isShow", true).apply()
     }
 

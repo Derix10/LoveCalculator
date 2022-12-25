@@ -20,21 +20,18 @@ object Modules {
     @Singleton
     fun provideApi(): CalculateApi {
         return Retrofit.Builder()
-                .baseUrl("https://love-calculator.p.rapidapi.com/")
-                .addConverterFactory(GsonConverterFactory.create()).build()
-                .create(CalculateApi::class.java)
+            .baseUrl("https://love-calculator.p.rapidapi.com/")
+            .addConverterFactory(GsonConverterFactory.create()).build()
+            .create(CalculateApi::class.java)
     }
 
-    @Module
-    @InstallIn(SingletonComponent::class)
-    class SharedPreferencesModule {
 
-        @Singleton
-        @Provides
-        fun provideSharedPreference(@ApplicationContext context: Context): SharedPreferences {
-            return context.getSharedPreferences("preferences_name", Context.MODE_PRIVATE)
-        }
+    @Singleton
+    @Provides
+    fun provideSharedPreference(@ApplicationContext context: Context): SharedPreferences {
+        return context.getSharedPreferences("isShow", Context.MODE_PRIVATE)
     }
+
 }
 
 
