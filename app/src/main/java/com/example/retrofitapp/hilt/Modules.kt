@@ -2,6 +2,8 @@ package com.example.retrofitapp.hilt
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.retrofitapp.database.HistoryDao
+import com.example.retrofitapp.database.HistoryDataBase
 import com.example.retrofitapp.retrofit.CalculateApi
 import dagger.Module
 import dagger.Provides

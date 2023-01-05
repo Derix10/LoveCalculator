@@ -27,7 +27,6 @@
         app:cornerRadius="22sp"
         android:text="@string/get_started"
         android:textSize="20sp"
-        android:fontFamily="serif"
         style="@style/Platform.MaterialComponents"
         android:layout_marginHorizontal="20sp"
         android:id="@+id/btn_getStarted"

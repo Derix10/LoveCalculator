@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.example.retrofitapp.R
 import com.example.retrofitapp.mvvm.ActivityMainViewModel
 import com.example.retrofitapp.databinding.FragmentCalculatorBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -29,6 +30,9 @@ class CalculatorFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnCalculate.setOnClickListener {
             makeRequest()
+        }
+        binding.history.setOnClickListener{
+            findNavController().navigate(R.id.historyFragment)
         }
 
     }

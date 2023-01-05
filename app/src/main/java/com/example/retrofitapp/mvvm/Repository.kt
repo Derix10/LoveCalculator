@@ -21,7 +21,7 @@ class Repository @Inject constructor(private val api : CalculateApi) {
                 }
 
                 override fun onFailure(call: Call<CalculateModel>, t: Throwable) {
-                    TODO("Not yet implemented")
+                    t.message
                 }
 
             }

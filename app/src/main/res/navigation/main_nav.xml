@@ -35,4 +35,9 @@
         android:name="com.example.retrofitapp.board.GetStartedFragment"
         android:label="fragment_get_started"
         tools:layout="@layout/fragment_get_started" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.retrofitapp.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
 </navigation>

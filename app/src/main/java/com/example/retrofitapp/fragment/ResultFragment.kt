@@ -8,7 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.retrofitapp.App
+import com.example.retrofitapp.R
 import com.example.retrofitapp.databinding.FragmentResultBinding
+import com.example.retrofitapp.mvvm.CalculateModel
 
 
 class ResultFragment : Fragment() {
@@ -40,8 +43,18 @@ class ResultFragment : Fragment() {
         binding.yourScore.text = yourScore
         binding.percentage.text = "$percentage %"
 
+        App.db.historyDao().addToHistory(CalculateModel(
+            firstName = fname,
+            secondName = sname,
+            percentage = percentage
+        ))
         binding.btnTryAgain.setOnClickListener {
             findNavController().navigateUp()
         }
+        binding.seocndHistory.setOnClickListener{
+
+            findNavController().navigate(R.id.historyFragment)
+        }
+
     }
 }
